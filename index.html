@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.svg" type="image/icon type"/>
+    
     <!-- JQuery -->
     <script
     src="https://code.jquery.com/jquery-3.6.0.js"
@@ -18,6 +20,84 @@
     <title>Calculadora JQuery</title>
 </head>
 <body>
+    <div class="container">
+        <!-- Este div es para los detalles extras de la calculadora -->
+        <div class="row mt-2">
+            <div class="col-12 ">DETALLES SUPERIORES PARA EL FINAL</div>
+        </div>
+        <div class="row">
+            <div class="col-8 border border-dark">CIENTÍFICA</div>
+            <div class="col-4">HISTORIAL</div>
+        </div>
+        <div class="row">
+            <div class="col-8 border border-dark d-flex justify-content-center">
+               
+                <div class="row">
+                    <!-- <div class="col-6"></div> -->
+                    <div class="col-12">
+                         <div id="resultado">
+                            <!-- <td class="caja"> -->
+                                <input class="pantalla" type="text" id="textoPantalla"></p>
+                            <!-- </td> -->
+                        </div>     
+                        <table class="table table-bordered calculadora d-flex justify-content-center">                            
+                            <tr>
+                                <!-- Agregar div para hacer lo funcional con teclado -->
+                                <td><button class="btn-lg" id="btn2nd">2<sup>nd</sup></button></td>
+                                <td><button class="btn-lg" id="btnPI">π</button></td>
+                                <td><button class="btn-lg" id="btnE"">e</button></td>
+                                <td><button class="btn-lg" id="btnC">C</button></td>
+                                <td><button class="btn-lg" id="btnX">x</button></td>
+                            </tr>
+                            <tr>
+                                <td><button class="btn-lg" id="btnX2">x<sup>2</sup></button></td>
+                                <td><button class="btn-lg" id="btn1x">1/x</button></td>
+                                <td><button class="btn-lg" id="btnAbs">|x|</button></td>
+                                <td><button class="btn-lg" id="btnExp">exp</button></td>
+                                <td><button class="btn-lg" id="btnMod">mod</button></td>
+                            </tr>
+                            <tr>
+                                <td><button class="btn-lg" id="btnRaiz"><sup>2</sup>√x</button></td>
+                                <td><button class="btn-lg" id="btnParI">(</button></td>
+                                <td><button class="btn-lg" id="btnParD">)</button></td>
+                                <td><button class="btn-lg" id="btnN">n!</button></td>
+                                <td><button class="btn-lg" id="btnDivi">/</button></td>
+                            </tr>
+                            <tr>
+                                <td><button class="btn-lg" id="btnXY"">x<sup>y</sup></button></td>
+                                <td><button href="7" class="btn-lg val" id="num7"">7</button></td>
+                                <td><button href="8" class="btn-lg val" id="num8">8</button></td>
+                                <td><button href="9" class="btn-lg val" id="num9">9</button></td>
+                                <td><button class="btn-lg" id="btnMulti">X</button></td>
+                            </tr>
+                            <tr>
+                                <td><button class="btn-lg" id="btn10x">10<sup>x</sup></button></td>
+                                <td><button href="4" class="btn-lg val" id="num4">4</button></td>
+                                <td><button href="5" class="btn-lg val" id="num5">5</button></td>
+                                <td><button href="6" class="btn-lg val" id="num6">6</button></td>
+                                <td><button class="btn-lg" id="btnResta">-</button></td>
+                            </tr>
+                            <tr>
+                                <td><button class="btn-lg" id="btnLog">log</button></td>
+                                <td><button href="1" class="btn-lg val" id="num1">1</td>
+                                <td><button href="2" class="btn-lg val" id="num2">2</button></td>
+                                <td><button href="3" class="btn-lg val" id="num3">3</button></td>
+                                <td><button class="btn-lg" id="btnSuma">+</button></td>       
+                            </tr>
+                            <tr>
+                                <td><button class="btn-lg" id="btnLn">ln</button></td>
+                                <td><button class="btn-lg" id="btnMasMenos">+/-</button></td>
+                                <td><button href="0" class="btn-lg val" id="num0">0</button></td>
+                                <td><button href="." class="btn-lg val" id="btnComa">,</button></td>
+                                <td><button class="btn-lg" id="btnIgual">=</button></td>           
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 border border-dark" id="listadoHistorico">Aquí va el histórico</div>
+        </div>
+    </div>    
     
 <script src="/js/scripts.js"></script>
 </body>
