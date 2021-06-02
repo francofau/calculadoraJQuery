@@ -18,6 +18,89 @@
     <title>Calculadora JQuery</title>
 </head>
 <body>
+    <div class="container-fluid">
+        <!-- Este div es para los detalles extras de la calculadora -->
+        <div class="row">
+            <div class="col-12">DETALLES</div>
+        </div>
+        <!-- Este div va a ser para el texto Científica/Historial -->
+        <div class="row">
+            <div class="col-8 border border-dark">CIENTIFICA</div>
+            <div class="col-4">HISTORIAL</div>
+        </div>
+        <div class="row">
+            <div class="col-8 border border-dark">
+                <div class="resultado">
+                        <td class="caja">
+                        <p id="textoPantalla">0</p>
+                        </td>
+                    </div>     
+                <div class="row">
+                    <!-- <div class="col-6"></div> -->
+                    <div class="col-12">
+                        <table class="table table-borderless calculadora d-flex justify-content-center">
+                            <tr>
+                                
+                            </tr>
+                            <tr>
+                                <!-- Agregar div para hacer lo funcional con teclado -->
+                                <td><button class="btn-lg" id="ret" onclick="retro()">2<sup>nd</sup></button></td>
+                                <td><button class="btn-lg" id="parcial" onclick="bParc()"> π</button></td>
+                                <td><button class="btn-lg" id="total" onclick="bTot()">e</button></td>
+                                <td><button class="btn-lg" id="1" onclick="numero('/')">C</button></td>
+                                <td><button class="btn-lg" id="2" onclick="raizC()">x</button></td>
+                            </tr>
+                            <tr>
+                                <td><button class="btn-lg" id="3" onclick="numero('7')">x<sup>2</sup></button></td>
+                                <td><button class="btn-lg" id="4" onclick="numero('8')">1/x</button></td>
+                                <td><button class="btn-lg" id="5" onclick="numero('9')">|x|</button></td>
+                                <td><button class="btn-lg" id="6" onclick="numero('/')">exp</button></td>
+                                <td><button class="btn-lg" id="7" onclick="raizC()">mod</button></td>
+                            </tr>
+                            <tr>
+                                <td><button class="btn-lg" id="8" onclick="numero('7')"><sup>2</sup>√x</button></td>
+                                <td><button class="btn-lg" id="9" onclick="numero('8')">(</button></td>
+                                <td><button class="btn-lg" id="10" onclick="numero('9')">)</button></td>
+                                <td><button class="btn-lg" id="11" onclick="numero('/')">n!</button></td>
+                                <td><button class="btn-lg" id="12" onclick="raizC()">%</button></td>
+                            </tr>
+                            <tr>
+                                <td><button class="btn-lg" id="13" onclick="numero('7')">x<sup>y</sup></button></td>
+                                <td><button class="btn-lg" id="14" onclick="numero('8')">7</button></td>
+                                <td><button class="btn-lg" id="15" onclick="numero('9')">8</button></td>
+                                <td><button class="btn-lg" id="16" onclick="numero('/')">9</button></td>
+                                <td><button class="btn-lg" id="17" onclick="raizC()">X</button></td>
+                            </tr>
+                            <tr>
+                                <td><button class="btn-lg" id="18" onclick="numero('4')">10<sup>x</sup></button></td>
+                                <td><button class="btn-lg" id="19" onclick="numero('5')">4</button></td>
+                                <td><button class="btn-lg" id="20" onclick="numero('6')">5</button></td>
+                                <td><button class="btn-lg" id="21" onclick="operar('*')">6</button></td>
+                                <td><button class="btn-lg" id="22" onclick="porcent()">-</button></td>
+                            </tr>
+                            <tr>
+                                <td><button class="btn-lg" id="23" onclick="numero('1')">log</button></td>
+                                <td><button class="btn-lg" id="24" onclick="numero('2')">1</td>
+                                <td><button class="btn-lg" id="25" onclick="numero('3')">2</button></td>
+                                <td><button class="btn-lg" id="26" onclick="numero('-')">3</button></td>
+                                <td><button class="btn-lg" id="unox">+</button></td>       
+                            </tr>
+                            <tr>
+                                <td><button class="btn-lg" id="27" onclick="numero('0')">ln</button></td>
+                                <td><button class="btn-lg" id="28" onclick="opuest()">+/-</button></td>
+                                <td><button class="btn-lg" id="29" onclick="numero('.')">0</button></td>
+                                <td><button class="btn-lg" id="30" onclick="operar('+')">,</button></td>
+                                <td><button class="btn-lg" id="igual">=</button></td>           
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 border border-dark bg-primary" id="demo">HISTORIAL</div>
+        </div>
+    </div>
+
+    
     
 <script src="/js/scripts.js"></script>
 </body>
