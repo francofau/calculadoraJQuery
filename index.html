@@ -15,19 +15,27 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <!-- Font Awesome-->
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
     <!-- CSS propio -->
     <link rel="stylesheet" href="css/styles.css">
     <title>Calculadora JQuery</title>
 </head>
 <body>
     <div class="container">
-        <!-- Este div es para los detalles extras de la calculadora -->
         <div class="row mt-2">
-            <div class="col-12 ">DETALLES SUPERIORES PARA EL FINAL</div>
+            <div class="barraSuperior col-12 border border-dark">DETALLES SUPERIORES PARA EL FINAL
+                <div id="botonesVentana">
+                    <div id="minimizar"><i class="far fa-window-minimize"></i></div>
+                    <div id="maximizar"><i class="fas fa-window-maximize"></i></div>
+                    <div id="cerrar"><i class="fas fa-window-close"></i></div>
+                </div>
+            </div>
         </div>
         <div class="row">
             <div class="col-8 border border-dark">CIENTÍFICA</div>
-            <div class="col-4">HISTORIAL</div>
+            <!-- El titulo "historial" se oculta cuando se achica la pantalla -->
+            <div class="col-4 border border-dark d-none d-lg-block">HISTORIAL</div>
         </div>
         <div class="row">
             <div class="col-8 border border-dark d-flex justify-content-center">
@@ -43,11 +51,11 @@
                         <table class="table table-bordered calculadora d-flex justify-content-center">                            
                             <tr>
                                 <!-- Agregar div para hacer lo funcional con teclado -->
-                                <td><button class="btn-lg" id="btn2nd">2<sup>nd</sup></button></td>
+                                <td><button class="btn-lg" id="btn2nd">2<sup>nd</sup>VER</button></td>
                                 <td><button class="btn-lg" id="btnPI">π</button></td>
                                 <td><button class="btn-lg" id="btnE"">e</button></td>
-                                <td><button class="btn-lg" id="btnC">C</button></td>
-                                <td><button class="btn-lg" id="btnX">x</button></td>
+                                <td><button class="btn-lg" id="btnC">CE</button></td>
+                                <td><button class="btn-lg" id="btnX" ><i class="fas fa-backspace"></i></button></td>
                             </tr>
                             <tr>
                                 <td><button class="btn-lg" id="btnX2">x<sup>2</sup></button></td>
@@ -95,7 +103,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-4 border border-dark" id="listadoHistorico">Aquí va el histórico</div>
+            <!-- El contenido histórico se oculta cuando se achica la pantalla -->
+            <div class="col-4 border border-dark d-none d-lg-block" id="listadoHistorico">Aquí va el histórico</div>
         </div>
     </div>    
     
