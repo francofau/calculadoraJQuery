@@ -22,36 +22,23 @@
     <title>Calculadora JQuery</title>
 </head>
 <body>
-    <div class="container">
-        <div class="row mt-2">
-            <div class="barraSuperior col-12 border border-dark">DETALLES SUPERIORES PARA EL FINAL
-                <div id="botonesVentana">
-                    <div id="minimizar"><i class="far fa-window-minimize"></i></div>
-                    <div id="maximizar"><i class="fas fa-window-maximize"></i></div>
-                    <div id="cerrar"><i class="fas fa-window-close"></i></div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-8 border border-dark">CIENTÍFICA</div>
+    <div class="container border border-dark mt-2">
+        <div class="row sup">
+            <div class="col-8 border bi bi-list h4"><i class="fas fa-bars"></i> Científica</div>
             <!-- El titulo "historial" se oculta cuando se achica la pantalla -->
-            <div class="col-4 border border-dark d-none d-lg-block">HISTORIAL</div>
+            <div class="col-4 bi bi-list h4 d-none d-lg-block">Historial</div>
         </div>
         <div class="row">
-            <div class="col-8 border border-dark d-flex justify-content-center">
+            <div class="col-8 d-flex">
                
                 <div class="row">
-                    <!-- <div class="col-6"></div> -->
                     <div class="col-12">
                          <div id="resultado">
-                            <!-- <td class="caja"> -->
                                 <input class="pantalla" type="text" id="textoPantalla"></p>
-                            <!-- </td> -->
                         </div>     
-                        <table class="table table-bordered calculadora d-flex justify-content-center">                            
+                        <table class="table calculadora d-flex justify-content-center">                            
                             <tr>
-                                <!-- Agregar div para hacer lo funcional con teclado -->
-                                <td><button class="btn-lg" id="btn2nd">2<sup>nd</sup>VER</button></td>
+                                <td><button class="btn-lg" id="btn2nd">2<sup>nd</sup></button></td>
                                 <td><button class="btn-lg" id="btnPI">π</button></td>
                                 <td><button class="btn-lg" id="btnE"">e</button></td>
                                 <td><button class="btn-lg" id="btnC">CE</button></td>
@@ -94,17 +81,17 @@
                             </tr>
                             <tr>
                                 <td><button class="btn-lg" id="btnLn">ln</button></td>
-                                <td><button class="btn-lg" id="btnMasMenos">+/-</button></td>
+                                <td><button class="btn-lg val" id="btnMasMenos">+/-</button></td>
                                 <td><button href="0" class="btn-lg val" id="num0">0</button></td>
                                 <td><button href="." class="btn-lg val" id="btnComa">,</button></td>
-                                <td><button class="btn-lg" id="btnIgual">=</button></td>           
+                                <td><button class="btn-lg" id="btnIgual">=</button></td>             
                             </tr>
                         </table>
                     </div>
                 </div>
             </div>
             <!-- El contenido histórico se oculta cuando se achica la pantalla -->
-            <div class="col-4 border border-dark d-none d-lg-block" id="listadoHistorico">Aquí va el histórico</div>
+            <div class="col-4 d-none d-lg-block" id="listadoHistorico">Aquí va el histórico</div>
         </div>
     </div>    
     
